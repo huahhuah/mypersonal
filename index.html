@@ -1,0 +1,290 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Yu Ling Peng | Creative Developer</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- =======================================================
+NAVBAR
+======================================================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+      <div class="container">
+        <a class="navbar-brand logo" href="#"> YU LING </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about"> ABOUT </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#works"> WORKS </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#skills"> SKILLS </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contact"> CONTACT </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- =======================================================
+HERO
+======================================================= -->
+    <section class="hero-section">
+      <div class="hero-glow"></div>
+
+      <div class="container h-100">
+        <div
+          class="row align-items-center justify-content-center min-vh-100 g-5"
+        >
+          <!-- LEFT -->
+          <div class="col-lg-6">
+            <div class="hero-left">
+              <p class="hero-subtitle">CREATIVE DEVELOPER</p>
+
+              <h1 class="hero-title">
+                DESIGN
+                <br />
+                MEETS
+                <br />
+                DIGITAL
+                <br />
+                EXPERIENCE
+              </h1>
+
+              <p class="hero-description">
+                專注於 AI 視覺生成、 品牌設計、多媒體敘事與全端開發，
+                將設計與技術整合成沉浸式數位體驗。
+              </p>
+
+              <div class="hero-buttons">
+                <a href="#works" class="btn-custom-primary"> VIEW WORKS </a>
+
+                <a href="#contact" class="btn-custom-outline"> CONTACT </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+          <div class="col-lg-5">
+            <div class="hero-image-wrapper">
+              <img
+                src="./images/7183aaf3.png"
+                alt="portfolio"
+                class="img-fluid hero-image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+ABOUT
+======================================================= -->
+    <section id="about" class="section-padding">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <img
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop"
+              class="img-fluid section-image"
+              alt="about"
+            />
+          </div>
+
+          <div class="col-lg-6">
+            <p class="section-label">ABOUT ME</p>
+
+            <h2 class="section-title">
+              Creative Designer & Full-Stack Developer
+            </h2>
+
+            <p class="section-text">
+              我擅長將設計、影像與開發能力整合成完整的數位作品， 目前專注於 AI
+              視覺生成、品牌設計、 互動網站與電影感敘事。
+            </p>
+
+            <p class="section-text">
+              曾參與並主導 Lovia 募資平台開發， 負責前後端整合、金流串接、 API
+              架構與使用者體驗設計。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+WORKS
+======================================================= -->
+    <section id="works" class="section-padding">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="section-label">FEATURED WORKS</p>
+
+          <h2 class="section-title center-title">Selected Projects</h2>
+        </div>
+
+        <div class="row g-4">
+          <!-- =======================================================
+      LOVIA
+      ======================================================= -->
+          <div class="col-lg-4 col-md-6">
+            <a href="./projects/lovia.html" class="project-card">
+              <img src="./images/lovia.png" class="project-image" alt="Lovia" />
+
+              <div class="project-content">
+                <p class="project-category">FULL-STACK PLATFORM</p>
+
+                <h3 class="project-title-small">LOVIA</h3>
+
+                <p class="project-description">
+                  Vue + Node.js 募資平台， 整合 JWT、LINE Pay、ECPay、
+                  完整會員系統與 API 架構。
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <!-- =======================================================
+      SIGNAL
+      ======================================================= -->
+          <div class="col-lg-4 col-md-6">
+            <a href="./projects/signal.html" class="project-card">
+              <img
+                src="./images/19.png"
+                class="project-image"
+                alt="最後一封訊號"
+              />
+
+              <div class="project-content">
+                <p class="project-category">AI CINEMATIC FILM</p>
+
+                <h3 class="project-title-small">最後一封訊號</h3>
+
+                <p class="project-description">
+                  AI 電影感未來城市短片， 結合 Runway、 視覺敘事與多媒體設計。
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <!-- =======================================================
+      RABAY
+      ======================================================= -->
+          <div class="col-lg-4 col-md-6">
+            <a href="./projects/rabay.html" class="project-card">
+              <img
+                src="./images/rabay.png"
+                class="project-image"
+                alt="拉拝手創"
+              />
+
+              <div class="project-content">
+                <p class="project-category">BRAND DESIGN</p>
+
+                <h3 class="project-title-small">拉拝手創</h3>
+
+                <p class="project-description">
+                  太魯閣族文化品牌設計， 包含 CIS 視覺、
+                  海報、杯墊與多媒體應用設計。
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+SKILLS
+======================================================= -->
+    <section id="skills" class="section-padding">
+      <div class="container text-center">
+        <p class="section-label">SKILLS</p>
+
+        <h2 class="section-title center-title mb-5">Tools & Technologies</h2>
+
+        <div class="skills-wrapper">
+          <span>Vue.js</span>
+          <span>Node.js</span>
+          <span>PostgreSQL</span>
+          <span>JWT</span>
+          <span>LINE Pay</span>
+          <span>ECPay</span>
+          <span>Photoshop</span>
+          <span>Illustrator</span>
+          <span>Premiere Pro</span>
+          <span>After Effects</span>
+          <span>Runway</span>
+          <span>Bootstrap 5</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+CONTACT
+======================================================= -->
+    <section id="contact" class="contact-section">
+      <div class="container text-center">
+        <p class="section-label">CONTACT</p>
+
+        <h2 class="contact-title">
+          LET'S BUILD
+          <br />
+          SOMETHING AMAZING
+        </h2>
+
+        <a href="mailto:energy5209@gmail.com" class="contact-mail">
+          energy5209@gmail.com
+        </a>
+      </div>
+    </section>
+
+    <!-- =======================================================
+FOOTER
+======================================================= -->
+    <footer class="footer">© 2026 YU LING PENG</footer>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
