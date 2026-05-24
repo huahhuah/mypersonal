@@ -9,11 +9,38 @@ PROJECT HERO
 .project-video {
   width: 100%;
 
-  height: 100vh;
+  height: auto;
 
-  object-fit: cover;
+  max-width: 100%;
+
+  margin-inline: auto;
+
+  border-radius: 24px;
 
   display: block;
+}
+
+.project-carousel {
+  overflow: hidden;
+
+  border-radius: 24px;
+}
+
+.project-carousel-image {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+}
+
+.project-carousel .carousel-control-prev,
+.project-carousel .carousel-control-next {
+  width: 12%;
+}
+
+.project-carousel .carousel-indicators {
+  margin-bottom: 18px;
 }
 
 /* =======================================================
@@ -42,6 +69,16 @@ PROJECT SECTION
   margin-bottom: 40px;
 }
 
+.project-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: clamp(1.4rem, 3vw, 2rem);
+
+  font-weight: 700;
+
+  margin-bottom: 32px;
+}
+
 .project-text {
   color: rgba(255, 255, 255, 0.7);
 
@@ -50,6 +87,72 @@ PROJECT SECTION
   font-size: 1.1rem;
 
   margin-bottom: 24px;
+}
+
+.project-tools {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 40px;
+}
+
+.project-tools p {
+  width: 100%;
+
+  color: var(--text-main);
+
+  font-weight: 700;
+
+  margin-bottom: 4px;
+}
+
+.project-tools span,
+.project-tools a {
+  color: rgba(255, 255, 255, 0.72);
+
+  padding: 10px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.project-tools a {
+  transition:
+    color 0.3s,
+    border-color 0.3s,
+    background 0.3s;
+}
+
+.project-tools a:hover {
+  color: var(--text-main);
+
+  border-color: rgba(56, 189, 248, 0.45);
+
+  background: rgba(56, 189, 248, 0.12);
+}
+
+.prompt-direction {
+  margin-top: 44px;
+  padding-left: 24px;
+
+  border-left: 1px solid rgba(56, 189, 248, 0.45);
+}
+
+.prompt-title {
+  color: var(--cyan);
+
+  font-size: 0.9rem;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 20px;
 }
 
 /* =======================================================
@@ -203,12 +306,64 @@ SECTION HEADER
 STORY IMAGE
 ======================================================= */
 
+.storyboard-row {
+  justify-content: center;
+
+  width: 100%;
+
+  margin-top: 36px;
+
+  margin-inline: auto;
+
+  --bs-gutter-x: 0;
+}
+
+.storyboard-row > * {
+  padding-inline: 0;
+}
+
 .story-image {
   width: 100%;
+
+  max-width: 100%;
+
+  height: auto;
+
+  margin-inline: auto;
 
   border-radius: 24px;
 
   display: block;
+}
+
+/* =======================================================
+PROMOTIONAL DESIGN
+======================================================= */
+
+.promo-grid {
+  display: grid;
+
+  grid-template-columns: minmax(260px, 0.62fr) minmax(320px, 1fr);
+
+  align-items: center;
+
+  gap: 32px;
+}
+
+.promo-item img {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  border-radius: 24px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.promo-ticket {
+  align-self: center;
 }
 
 /* =======================================================
@@ -251,7 +406,11 @@ RWD - MOBILE
   }
 
   .project-video {
-    height: 60vh;
+    border-radius: 18px;
+  }
+
+  .project-carousel {
+    border-radius: 18px;
   }
 
   .project-section {
@@ -277,6 +436,14 @@ RWD - MOBILE
   }
 
   .story-image {
+    border-radius: 18px;
+  }
+
+  .promo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .promo-item img {
     border-radius: 18px;
   }
 }
