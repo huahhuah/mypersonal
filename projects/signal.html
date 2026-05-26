@@ -22,9 +22,41 @@
     <!-- =======================================================
 NAVBAR
 ======================================================= -->
-    <nav class="navbar navbar-dark fixed-top custom-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
       <div class="container">
-        <a href="../index.html" class="navbar-brand logo"> YU LING </a>
+        <a href="../index.html" class="navbar-brand logo"> YU LING PENG </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#works"> WORKS </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#about"> ABOUT </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#skills"> SKILLS </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html#contact"> CONTACT </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -41,16 +73,15 @@ PROJECT INFO
 
             <p class="project-subtitle">The Last Signal</p>
 
-            <p class="project-text">
-              這是一部關於「等待」的短片。
-            </p>
+            <p class="project-text">這是一部關於「等待」的短片。</p>
 
             <p class="project-text">
               故事設定在人類消失後的未來。城市停止運作，文明留下殘響。
             </p>
 
             <p class="project-text">
-              一名 AI 持續運轉、持續等待。直到最後能源被重新點亮，她收到一封遲來的訊息。
+              一名 AI
+              持續運轉、持續等待。直到最後能源被重新點亮，她收到一封遲來的訊息。
             </p>
 
             <p class="project-text">
@@ -73,6 +104,12 @@ HERO VIDEO
 ======================================================= -->
     <section class="project-hero">
       <div class="container">
+        <div class="section-header">
+          <p class="project-label">FINAL VIDEO</p>
+
+          <h2 class="section-title">AI Cinematic Short Film</h2>
+        </div>
+
         <video class="project-video" autoplay muted loop controls playsinline>
           <source src="../videos/signal.mp4" type="video/mp4" />
         </video>
@@ -139,32 +176,40 @@ PROMOTIONAL DESIGN
     <section class="project-section">
       <div class="container">
         <div class="section-header">
-          <p class="project-label">PROMOTIONAL DESIGN</p>
+          <p class="project-label">CINEMATIC SCI-FI VISUAL PROJECT</p>
 
-          <h2 class="section-title">Poster & Ticket</h2>
+          <h2 class="section-title">THE LAST SIGNAL</h2>
+
+          <p class="section-description">
+            A cinematic sci-fi visual project exploring memory, signal, and the
+            rebirth of a sleeping city through poster design, ticket systems,
+            and futuristic world building.
+          </p>
         </div>
 
         <div class="promo-grid">
           <div class="promo-item promo-poster">
             <img
-              src="../images/最後一封訊號-海報.png"
-              alt="最後一封訊號電影海報"
+              src="../images/SINGAL.png"
+              alt="THE LAST SIGNAL 電影主視覺海報"
             />
           </div>
 
           <div class="promo-item promo-ticket">
             <img
               src="../images/最後一封訊號-電影票.png"
-              alt="最後一封訊號電影票"
+              alt="THE LAST SIGNAL 電影票設計"
             />
           </div>
         </div>
       </div>
     </section>
-
     <!-- =======================================================
 FOOTER
 ======================================================= -->
     <footer class="footer">© 2026 YU LING PENG</footer>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
