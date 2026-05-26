@@ -80,7 +80,11 @@ NAVBAR
 ======================================================= */
 
 .custom-navbar {
-  background: rgba(4, 8, 22, 0.6);
+  background: linear-gradient(
+    180deg,
+    rgba(4, 8, 22, 0.82),
+    rgba(4, 8, 22, 0.48)
+  );
 
   backdrop-filter: blur(20px);
 
@@ -90,9 +94,11 @@ NAVBAR
 }
 
 .logo {
-  letter-spacing: 4px;
+  letter-spacing: 5px;
 
-  font-weight: 700;
+  font-size: 0.95rem;
+
+  font-weight: 600;
 }
 
 .nav-link {
@@ -100,11 +106,17 @@ NAVBAR
 
   margin-left: 20px;
 
+  font-size: 0.78rem;
+
+  letter-spacing: 2px;
+
   transition: 0.3s;
 }
 
 .nav-link:hover {
   color: white !important;
+
+  text-shadow: 0 0 18px rgba(56, 189, 248, 0.45);
 }
 
 /* =======================================================
@@ -123,20 +135,67 @@ HERO
   overflow: hidden;
 }
 
+.hero-section::before,
+.hero-section::after {
+  content: "";
+
+  position: absolute;
+
+  pointer-events: none;
+}
+
+.hero-section::before {
+  inset: 0;
+
+  background:
+    linear-gradient(90deg, rgba(4, 8, 22, 0.92) 0%, transparent 58%),
+    radial-gradient(
+      circle at 78% 45%,
+      rgba(56, 189, 248, 0.18),
+      transparent 34%
+    );
+
+  z-index: 0;
+}
+
+.hero-section::after {
+  right: -12%;
+  bottom: -28%;
+
+  width: 46vw;
+  height: 46vw;
+
+  background: rgba(168, 85, 247, 0.16);
+
+  filter: blur(120px);
+
+  animation: cinematicGlow 12s ease-in-out infinite alternate;
+}
+
 .hero-glow {
   position: absolute;
 
-  top: 50%;
-  left: 50%;
+  top: 44%;
+  left: 70%;
 
-  width: 700px;
-  height: 700px;
+  width: 860px;
+  height: 860px;
 
   transform: translate(-50%, -50%);
 
-  background: rgba(56, 189, 248, 0.15);
+  background:
+    radial-gradient(circle, rgba(56, 189, 248, 0.2), transparent 58%),
+    radial-gradient(circle at 65% 45%, rgba(168, 85, 247, 0.16), transparent 44%);
 
   filter: blur(120px);
+
+  animation: heroGlowDrift 10s ease-in-out infinite alternate;
+}
+
+.hero-section .container {
+  position: relative;
+
+  z-index: 1;
 }
 
 .hero-left {
@@ -154,15 +213,31 @@ HERO
 .hero-title {
   font-size: clamp(3rem, 6vw, 5.5rem);
 
-  font-weight: 800;
+  font-weight: 300;
 
-  line-height: 0.85;
+  line-height: 0.9;
 
   margin-bottom: 40px;
+
+  letter-spacing: 0;
 
   overflow-wrap: normal;
 
   word-break: keep-all;
+}
+
+.hero-title-line {
+  display: inline-block;
+
+  font-weight: 300;
+
+  opacity: 0.92;
+}
+
+.hero-title-strong {
+  font-weight: 600;
+
+  opacity: 1;
 }
 
 .hero-description {
@@ -178,13 +253,21 @@ HERO
 .hero-buttons {
   display: flex;
 
-  gap: 20px;
+  gap: 16px;
 
   margin-top: 50px;
 }
 
 .hero-image-wrapper {
   position: relative;
+
+  width: min(700px, 48vw);
+
+  margin-left: -20px;
+
+  transform: translateX(78px);
+
+  animation: heroImageFloat 8s ease-in-out infinite;
 }
 
 .hero-image-wrapper::before {
@@ -192,19 +275,33 @@ HERO
 
   position: absolute;
 
-  inset: 0;
+  inset: -12%;
 
-  background: rgba(56, 189, 248, 0.2);
+  background:
+    radial-gradient(circle at 45% 35%, rgba(56, 189, 248, 0.28), transparent 42%),
+    radial-gradient(circle at 70% 65%, rgba(168, 85, 247, 0.22), transparent 46%);
 
-  filter: blur(80px);
+  filter: blur(72px);
+
+  opacity: 0.9;
+
+  animation: imageAura 9s ease-in-out infinite alternate;
 }
 
 .hero-image {
   position: relative;
 
-  border-radius: 32px;
+  width: 100%;
+
+  max-width: none;
+
+  border-radius: 8px;
 
   border: 1px solid var(--border);
+
+  box-shadow:
+    0 36px 110px rgba(0, 0, 0, 0.46),
+    0 0 80px rgba(56, 189, 248, 0.13);
 }
 
 /* =======================================================
@@ -212,39 +309,79 @@ BUTTON
 ======================================================= */
 
 .btn-custom-primary {
-  background: white;
+  position: relative;
 
-  color: black;
+  overflow: hidden;
 
-  padding: 16px 32px;
+  background: rgba(255, 255, 255, 0.08);
+
+  color: white;
+
+  padding: 15px 28px;
 
   border-radius: 999px;
 
-  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.24);
 
-  transition: 0.3s;
+  backdrop-filter: blur(18px);
+
+  font-size: 0.86rem;
+
+  font-weight: 500;
+
+  letter-spacing: 2px;
+
+  transition:
+    transform 0.3s,
+    border-color 0.3s,
+    background 0.3s,
+    box-shadow 0.3s;
 }
 
 .btn-custom-primary:hover {
   transform: translateY(-2px);
 
-  color: black;
+  background: rgba(56, 189, 248, 0.12);
+
+  border-color: rgba(56, 189, 248, 0.55);
+
+  box-shadow: 0 0 34px rgba(56, 189, 248, 0.18);
+
+  color: white;
 }
 
 .btn-custom-outline {
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.82);
 
-  color: white;
+  padding: 15px 28px;
 
-  padding: 16px 32px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
 
   border-radius: 999px;
 
-  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.025);
+
+  backdrop-filter: blur(18px);
+
+  font-size: 0.86rem;
+
+  letter-spacing: 2px;
+
+  transition:
+    transform 0.3s,
+    border-color 0.3s,
+    background 0.3s,
+    box-shadow 0.3s;
 }
 
 .btn-custom-outline:hover {
-  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border-color: rgba(255, 255, 255, 0.32);
+
+  box-shadow: 0 0 28px rgba(255, 255, 255, 0.08);
 
   color: white;
 }
@@ -460,6 +597,12 @@ CONTACT
   margin-bottom: 40px;
 }
 
+.contact-description {
+  color: var(--text-subtle);
+
+  margin-bottom: 32px;
+}
+
 .contact-mail {
   color: white;
 
@@ -484,6 +627,16 @@ FOOTER
   color: rgba(255, 255, 255, 0.5);
 }
 
+.footer p {
+  margin-bottom: 0;
+}
+
+.footer-quote {
+  color: rgba(255, 255, 255, 0.65);
+
+  margin-bottom: 10px !important;
+}
+
 /* =======================================================
 FLOATING ANIMATION
 ======================================================= */
@@ -499,6 +652,58 @@ FLOATING ANIMATION
 
   100% {
     transform: translateY(0px);
+  }
+}
+
+@keyframes heroImageFloat {
+  0% {
+    transform: translateX(78px) translateY(0);
+  }
+
+  50% {
+    transform: translateX(78px) translateY(-14px);
+  }
+
+  100% {
+    transform: translateX(78px) translateY(0);
+  }
+}
+
+@keyframes heroGlowDrift {
+  0% {
+    opacity: 0.72;
+
+    transform: translate(-52%, -48%) scale(0.96);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: translate(-48%, -52%) scale(1.06);
+  }
+}
+
+@keyframes imageAura {
+  0% {
+    opacity: 0.65;
+  }
+
+  100% {
+    opacity: 0.95;
+  }
+}
+
+@keyframes cinematicGlow {
+  0% {
+    opacity: 0.45;
+
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0.75;
+
+    transform: translateY(-28px);
   }
 }
 

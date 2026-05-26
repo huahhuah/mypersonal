@@ -28,6 +28,14 @@ TABLET
     display: flex;
 
     justify-content: center;
+
+    width: min(540px, 82vw);
+
+    margin: 48px auto 0;
+
+    transform: none;
+
+    animation: none;
   }
 
   .hero-title {
@@ -39,7 +47,9 @@ TABLET
   }
 
   .hero-image {
-    width: min(460px, 82vw);
+    width: 100%;
+
+    border-radius: 8px;
   }
 
   .section-padding {
@@ -181,11 +191,13 @@ MOBILE
 
     justify-content: center;
 
+    width: min(420px, 88vw);
+
     margin-top: 32px;
   }
 
   .hero-image {
-    width: min(360px, 88vw);
+    width: 100%;
 
     margin-inline: auto;
   }
@@ -199,9 +211,12 @@ MOBILE
   }
 
   .section-image,
-  .hero-image,
   .project-card {
     border-radius: 20px;
+  }
+
+  .hero-image {
+    border-radius: 8px;
   }
 
   .project-image {
