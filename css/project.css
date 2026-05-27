@@ -1545,8 +1545,16 @@ RABAY CULTURAL WARMTH OVERRIDES
 }
 
 .rabay-culture-site .rabay-culture-type span {
-  font-size: clamp(2.4rem, 5.6vw, 5.8rem);
+  font-family:
+    "Noto Sans TC",
+    "Noto Sans CJK TC",
+    "PingFang TC",
+    "Microsoft JhengHei",
+    sans-serif;
+  font-size: clamp(2.4rem, 5.1vw, 5.4rem);
   line-height: 1;
+  white-space: nowrap;
+  word-break: keep-all;
 }
 
 .rabay-culture-site .rabay-culture-image img {
