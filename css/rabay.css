@@ -1,0 +1,1193 @@
+/* =======================================================
+RABAY HANDCRAFT - WARM BRAND CASE STUDY
+======================================================= */
+
+:root {
+  --rabay-bg: #f5efe8;
+  --rabay-bg-2: #eadccf;
+  --rabay-dark: #1f1a16;
+  --rabay-brown: #5a3324;
+  --rabay-red: #9b2f28;
+  --rabay-green: #5a7d56;
+  --rabay-sand: #d8c2a4;
+  --rabay-text: #2a211b;
+  --rabay-sub: rgba(42, 33, 27, 0.68);
+  --rabay-line: rgba(42, 33, 27, 0.14);
+}
+
+/* BASE */
+body.rabay-page {
+  background: var(--rabay-bg);
+  color: var(--rabay-text);
+}
+
+.rabay-page .custom-navbar {
+  background: rgba(31, 26, 22, 0.86);
+  backdrop-filter: blur(18px);
+}
+
+/* COMMON */
+.rabay-kicker,
+.section-label {
+  color: var(--rabay-red);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.rabay-scroll-section {
+  padding: clamp(100px, 10vw, 160px) 0;
+}
+
+.rabay-editorial-head {
+  max-width: 980px;
+  margin-bottom: clamp(48px, 6vw, 88px);
+}
+
+.rabay-editorial-head h2,
+.rabay-story-lines h2,
+.rabay-belief blockquote {
+  color: var(--rabay-text);
+  font-size: clamp(2.4rem, 5vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+
+.rabay-story-lines p,
+.rabay-belief-copy p,
+.rabay-editorial-head p:not(.rabay-kicker) {
+  color: var(--rabay-sub);
+  font-size: 1.08rem;
+  line-height: 2;
+}
+
+/* HERO */
+.rabay-landing {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(31, 26, 22, 0.18), rgba(31, 26, 22, 0.75)),
+    radial-gradient(
+      circle at 50% 68%,
+      rgba(155, 47, 40, 0.22),
+      transparent 34%
+    ),
+    var(--rabay-dark);
+  color: #fff;
+}
+
+.rabay-mountain-layer {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(31, 26, 22, 0.18), rgba(31, 26, 22, 0.86)),
+    url("../images/rabay/1x/編織山.png") center 45% / min(58vw, 640px) auto
+      no-repeat;
+  opacity: 0.9;
+  filter: drop-shadow(0 34px 80px rgba(0, 0, 0, 0.45));
+}
+
+.rabay-weave-layer {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(245, 239, 234, 0.06) 0 1px,
+      transparent 1px 22px
+    ),
+    repeating-linear-gradient(
+      135deg,
+      rgba(245, 239, 234, 0.035) 0 1px,
+      transparent 1px 16px
+    );
+  opacity: 0.7;
+}
+
+.rabay-firelight {
+  position: absolute;
+  left: 50%;
+  bottom: -16%;
+  width: 60vw;
+  height: 32vw;
+  background: radial-gradient(
+    circle,
+    rgba(199, 111, 68, 0.38),
+    transparent 60%
+  );
+  filter: blur(70px);
+  transform: translateX(-50%);
+}
+
+.rabay-landing .container {
+  position: relative;
+  z-index: 3;
+}
+
+.rabay-landing-copy {
+  text-align: center;
+}
+
+.rabay-landing h1 {
+  margin: 28px 0;
+  color: #f5efe8;
+  font-size: clamp(4rem, 12vw, 11rem);
+  font-weight: 800;
+  line-height: 0.88;
+  letter-spacing: -0.04em;
+}
+
+.rabay-landing h1 span {
+  display: block;
+  margin-top: 28px;
+  color: rgba(245, 239, 232, 0.78);
+  font-size: clamp(1.2rem, 2.4vw, 2.4rem);
+  letter-spacing: 0.28em;
+}
+
+.rabay-landing-copy > p:last-child {
+  color: rgba(245, 239, 232, 0.82);
+  letter-spacing: 0.28em;
+}
+
+/* BRAND STORY */
+.rabay-story {
+  background: var(--rabay-bg);
+}
+
+.rabay-story-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.4fr;
+  gap: clamp(48px, 7vw, 96px);
+  align-items: start;
+}
+
+.rabay-story-lines p {
+  max-width: 760px;
+  margin-top: 28px;
+}
+
+/* MY ROLE */
+.project-role {
+  padding: clamp(90px, 10vw, 140px) clamp(24px, 8vw, 120px);
+  background: var(--rabay-dark);
+  color: #f5efe8;
+}
+
+.project-role h2 {
+  max-width: 900px;
+  margin: 18px 0 28px;
+  font-size: clamp(2rem, 4.5vw, 4.6rem);
+  font-weight: 700;
+  line-height: 1.08;
+}
+
+.project-role p:last-child {
+  max-width: 880px;
+  color: rgba(245, 239, 232, 0.72);
+  line-height: 2;
+}
+
+/* CULTURE */
+.rabay-culture-row {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  min-height: 92vh;
+}
+
+.rabay-culture-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(48px, 7vw, 96px);
+  background: var(--rabay-brown);
+  color: #f5efe8;
+}
+
+.rabay-culture-type span {
+  padding: 24px 0;
+  color: #f5efe8;
+  font-size: clamp(2.2rem, 5vw, 5.2rem);
+  font-weight: 700;
+  border-bottom: 1px solid rgba(245, 239, 232, 0.18);
+}
+
+.rabay-culture-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CONCEPT */
+.rabay-belief {
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(155, 47, 40, 0.12),
+      transparent 28%
+    ),
+    var(--rabay-bg-2);
+}
+
+.rabay-belief blockquote {
+  margin: 34px 0 0;
+}
+
+.rabay-belief-copy {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(32px, 5vw, 72px);
+  margin-top: 64px;
+}
+
+/* LOGO SYSTEM */
+.rabay-identity {
+  background: var(--rabay-bg);
+}
+
+.rabay-logo-showcase {
+  display: grid;
+  gap: 28px;
+}
+
+.rabay-logo-hero-image {
+  margin: 0;
+  padding: clamp(20px, 4vw, 48px);
+  background: #fffaf3;
+  border: 1px solid var(--rabay-line);
+  box-shadow: 0 28px 70px rgba(31, 26, 22, 0.1);
+}
+
+.rabay-logo-hero-image img {
+  width: 100%;
+  display: block;
+}
+
+.rabay-logo-notes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--rabay-line);
+}
+
+.rabay-logo-notes p {
+  margin: 0;
+  padding: 28px;
+  background: #fffaf3;
+  color: var(--rabay-sub);
+  line-height: 1.8;
+}
+
+/* COLOR SYSTEM */
+.rabay-palette {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  padding: clamp(28px, 5vw, 72px);
+  background: var(--rabay-dark);
+}
+
+.rabay-palette-head {
+  grid-column: 1 / -1;
+  max-width: 900px;
+  margin-bottom: 40px;
+}
+
+.rabay-palette-head h2 {
+  color: #f5efe8;
+  font-size: clamp(2.2rem, 4.6vw, 4.8rem);
+  line-height: 1.12;
+}
+
+.rabay-color-panel {
+  min-height: 320px;
+  padding: clamp(28px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+
+.rabay-color-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.06) 0 1px,
+    transparent 1px 14px
+  );
+}
+
+.rabay-color-panel span,
+.rabay-color-panel p,
+.rabay-color-panel small {
+  position: relative;
+  z-index: 1;
+}
+
+.rabay-color-panel span {
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.rabay-color-panel p {
+  margin: 18px 0;
+  line-height: 1.8;
+}
+
+.color-earth {
+  background: rgb(162, 0, 0);
+  color: #fff;
+}
+
+.color-mountain {
+  background: rgb(15, 27, 33);
+  color: #fff;
+}
+
+.color-vine {
+  background: rgb(89, 129, 87);
+  color: #fff;
+}
+
+.color-ramie {
+  background: rgb(245, 239, 234);
+  color: var(--rabay-text);
+}
+
+.color-straw {
+  background: rgb(216, 194, 164);
+  color: var(--rabay-text);
+}
+
+.color-sugar {
+  background: rgb(88, 45, 23);
+  color: #fff;
+}
+
+/* SYMBOL */
+.rabay-symbol {
+  background: var(--rabay-bg);
+}
+
+.rabay-symbol-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: clamp(40px, 7vw, 100px);
+  align-items: center;
+}
+
+.rabay-symbol-image {
+  margin: 0;
+  padding: clamp(24px, 4vw, 56px);
+  background: #fffaf3;
+  box-shadow: 0 28px 80px rgba(31, 26, 22, 0.12);
+}
+
+.rabay-symbol-image img {
+  width: 100%;
+  display: block;
+}
+
+/* MOCKUP */
+.rabay-mockup-showcase {
+  background:
+    radial-gradient(
+      circle at 20% 10%,
+      rgba(155, 47, 40, 0.12),
+      transparent 28%
+    ),
+    var(--rabay-bg-2);
+}
+
+.rabay-object-stage.rabay-real-mockups {
+  width: min(1320px, calc(100% - 48px));
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 3vw, 42px);
+}
+
+.rabay-object {
+  position: relative;
+  overflow: hidden;
+  background: #fffaf3;
+  box-shadow: 0 26px 70px rgba(31, 26, 22, 0.14);
+}
+
+.rabay-object img {
+  width: 100%;
+  height: clamp(260px, 28vw, 420px);
+  object-fit: cover;
+  display: block;
+}
+
+/* AI VIDEO */
+.rabay-storyboard {
+  background: var(--rabay-dark);
+  color: #f5efe8;
+}
+
+.rabay-storyboard .rabay-editorial-head h2,
+.rabay-storyboard .rabay-kicker {
+  color: #f5efe8;
+}
+
+.rabay-cinema-board {
+  display: grid;
+  gap: clamp(36px, 5vw, 80px);
+}
+
+.rabay-video-plan {
+  padding: clamp(34px, 6vw, 80px);
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(245, 239, 232, 0.14);
+}
+
+.rabay-video-plan h3 {
+  margin: 28px 0 18px;
+  color: #f5efe8;
+  font-size: clamp(1.6rem, 3vw, 3rem);
+}
+
+.rabay-video-plan p,
+.rabay-video-plan li {
+  color: rgba(245, 239, 232, 0.72);
+  line-height: 2;
+}
+
+.rabay-storyboard-copy {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.rabay-storyboard-copy article {
+  padding: 28px;
+  border-left: 2px solid var(--rabay-red);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.rabay-storyboard-copy span {
+  color: var(--rabay-sand);
+  letter-spacing: 0.16em;
+}
+
+.rabay-storyboard-copy p {
+  color: rgba(245, 239, 232, 0.72);
+  line-height: 1.9;
+}
+
+.rabay-storyboard-divider h3 {
+  color: #f5efe8;
+  font-size: clamp(1.8rem, 3.4vw, 3.8rem);
+}
+
+.rabay-storyboard-image {
+  margin: 0;
+  background: #111;
+}
+
+.rabay-storyboard-image img {
+  width: 100%;
+  display: block;
+}
+
+/* VIDEO SECTION */
+.rabay-page .project-hero {
+  padding: clamp(90px, 10vw, 150px) 0;
+  background: var(--rabay-bg);
+}
+
+.rabay-video-heading {
+  max-width: 760px;
+  margin-bottom: 48px;
+}
+
+.rabay-video-heading h2 {
+  color: var(--rabay-text);
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1.12;
+}
+
+.rabay-page .project-video {
+  border-radius: 0;
+  box-shadow: 0 30px 90px rgba(31, 26, 22, 0.18);
+}
+
+/* FOOTER */
+.rabay-page .footer {
+  background: var(--rabay-dark);
+  color: rgba(245, 239, 232, 0.62);
+}
+
+/* RWD */
+@media (max-width: 992px) {
+  .rabay-story-grid,
+  .rabay-culture-row,
+  .rabay-belief-copy,
+  .rabay-symbol-grid,
+  .rabay-storyboard-copy {
+    grid-template-columns: 1fr;
+  }
+
+  .rabay-logo-notes,
+  .rabay-palette,
+  .rabay-object-stage.rabay-real-mockups {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rabay-culture-image img {
+    min-height: 520px;
+  }
+}
+
+@media (max-width: 640px) {
+  .rabay-logo-notes,
+  .rabay-palette,
+  .rabay-object-stage.rabay-real-mockups {
+    grid-template-columns: 1fr;
+  }
+
+  .rabay-landing h1 {
+    font-size: clamp(3.6rem, 18vw, 6rem);
+  }
+
+  .rabay-landing h1 span {
+    letter-spacing: 0.14em;
+  }
+
+  .rabay-culture-type span {
+    font-size: clamp(2.4rem, 12vw, 4rem);
+  }
+
+  .rabay-object img {
+    height: auto;
+  }
+}
+/* =======================================================
+RABAY HANDCRAFT - BRAND WEBSITE STYLE
+======================================================= */
+
+:root {
+  --rabay-cream: #f5efe8;
+  --rabay-paper: #fffaf3;
+  --rabay-sand: #d8c2a4;
+  --rabay-brown: #5a3324;
+  --rabay-dark: #1f1a16;
+  --rabay-red: #9b2f28;
+  --rabay-green: #5a7d56;
+  --rabay-text: #2a211b;
+  --rabay-sub: rgba(42, 33, 27, 0.68);
+  --rabay-line: rgba(42, 33, 27, 0.14);
+}
+
+body.rabay-brand-page {
+  background: var(--rabay-cream);
+  color: var(--rabay-text);
+}
+
+/* NAV */
+.rabay-navbar {
+  background: #080d15;
+  border-bottom: 1px solid rgba(245, 239, 232, 0.08);
+}
+
+.rabay-navbar .navbar-brand,
+.rabay-navbar .nav-link {
+  color: rgba(245, 239, 232, 0.9) !important;
+}
+
+.rabay-navbar .nav-link:hover {
+  color: #fff !important;
+}
+
+/* COMMON */
+.rabay-section {
+  padding: clamp(96px, 10vw, 160px) 0;
+}
+
+.rabay-label {
+  color: var(--rabay-red);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.rabay-section-head {
+  max-width: 920px;
+  margin-bottom: clamp(48px, 6vw, 80px);
+}
+
+.rabay-section-head.center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.rabay-section-head.center h2 {
+  max-width: none;
+  white-space: nowrap;
+}
+
+.rabay-section-head.center p:not(.rabay-label) {
+  margin-top: 30px;
+}
+
+.rabay-section-head h2,
+.rabay-role h2,
+.rabay-mascot-grid h2,
+.rabay-ending h2 {
+  color: var(--rabay-text);
+  font-size: clamp(2.4rem, 5vw, 5.4rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.rabay-section-head p,
+.rabay-role p,
+.rabay-mascot-grid p {
+  color: var(--rabay-sub);
+  font-size: 1.08rem;
+  line-height: 2;
+}
+
+/* HERO */
+.rabay-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 120px 0 clamp(28px, 4.5vh, 52px);
+  background: url("../images/rabay/rabay.png") right center / cover no-repeat;
+}
+
+.rabay-hero-grid {
+  max-width: 720px;
+}
+
+.rabay-hero h1 {
+  margin: 0 0 24px;
+  color: var(--rabay-text);
+  font-size: clamp(4.2rem, 10vw, 10rem);
+  font-weight: 900;
+  line-height: 0.86;
+  letter-spacing: -0.06em;
+}
+
+.rabay-hero-subtitle {
+  color: var(--rabay-red);
+  margin: 12px 0 26px;
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: 0.08em;
+}
+
+.rabay-hero-text {
+  max-width: 560px;
+  color: var(--rabay-sub);
+  font-size: 1.15rem;
+  line-height: 2;
+}
+
+/* INTRO */
+.rabay-intro {
+  background: var(--rabay-cream);
+}
+
+.rabay-intro .rabay-section-head {
+  width: min(100%, 1320px);
+  max-width: none;
+  margin-inline: auto;
+}
+
+.rabay-intro .rabay-section-head p:not(.rabay-label) {
+  max-width: 860px;
+  margin-inline: auto;
+  text-align: left;
+}
+
+.rabay-three-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--rabay-line);
+}
+
+.rabay-three-columns div {
+  padding: clamp(30px, 4vw, 54px);
+  background: var(--rabay-paper);
+}
+
+.rabay-three-columns figure {
+  height: 190px;
+  margin: 0 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: rgba(216, 194, 164, 0.18);
+}
+
+.rabay-three-columns img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 22px;
+  display: block;
+}
+
+.rabay-three-columns span {
+  color: var(--rabay-red);
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+}
+
+.rabay-three-columns h3 {
+  margin: 20px 0;
+  color: var(--rabay-text);
+  font-size: 2rem;
+}
+
+.rabay-three-columns p {
+  color: var(--rabay-sub);
+  line-height: 1.9;
+}
+
+/* ROLE */
+.rabay-role {
+  background: var(--rabay-paper);
+}
+
+.rabay-role-head {
+  max-width: none;
+  margin: 0 auto clamp(42px, 6vw, 76px);
+  text-align: center;
+}
+
+.rabay-role-head h2 {
+  color: var(--rabay-text);
+  font-size: clamp(2.5rem, 5.5vw, 5.6rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.rabay-role-head p:not(.rabay-label) {
+  max-width: none;
+  margin: 34px auto 0;
+  color: var(--rabay-sub);
+  font-size: 1.08rem;
+  line-height: 2;
+  white-space: nowrap;
+}
+
+.rabay-role-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(18px, 2vw, 28px);
+}
+
+.rabay-role-cards article {
+  min-height: 300px;
+  padding: clamp(28px, 4vw, 46px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: var(--rabay-cream);
+  border: 1px solid var(--rabay-line);
+  box-shadow: 0 24px 70px rgba(42, 33, 27, 0.08);
+}
+
+.rabay-role-cards span {
+  margin-bottom: auto;
+  color: var(--rabay-red);
+  font-size: 0.82rem;
+  letter-spacing: 0.26em;
+}
+
+.rabay-role-cards h3 {
+  margin: 46px 0 24px;
+  color: var(--rabay-text);
+  font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+  font-weight: 800;
+}
+
+.rabay-role-cards p {
+  margin: 0;
+  color: var(--rabay-sub);
+  line-height: 1.9;
+}
+
+/* LOGO */
+.rabay-logo-section {
+  background: var(--rabay-paper);
+}
+
+.rabay-logo-section .rabay-section-head {
+  max-width: none;
+}
+
+.rabay-logo-section .rabay-section-head h2 {
+  white-space: nowrap;
+}
+
+.rabay-logo-section .rabay-section-head p:not(.rabay-label) {
+  margin-top: 30px;
+}
+
+.rabay-logo-gallery {
+  display: grid;
+  gap: 28px;
+}
+
+.rabay-logo-gallery figure {
+  margin: 0;
+  padding: clamp(20px, 4vw, 52px);
+  background: #fff;
+  border: 1px solid var(--rabay-line);
+  box-shadow: 0 24px 70px rgba(42, 33, 27, 0.08);
+}
+
+.rabay-logo-gallery img {
+  width: 100%;
+  display: block;
+}
+
+/* COLOR */
+.rabay-color-section {
+  background: var(--rabay-dark);
+}
+
+.rabay-color-section .rabay-section-head h2 {
+  color: var(--rabay-cream);
+}
+
+.rabay-color-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+}
+
+.rabay-color-grid div {
+  min-height: 280px;
+  padding: clamp(28px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.rabay-color-grid span {
+  font-size: clamp(1.8rem, 3.6vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.rabay-color-grid p {
+  margin: 16px 0 0;
+  line-height: 1.8;
+}
+
+.color-red {
+  background: rgb(162, 0, 0);
+  color: #fff;
+}
+
+.color-black {
+  background: rgb(15, 27, 33);
+  color: #fff;
+}
+
+.color-green {
+  background: rgb(89, 129, 87);
+  color: #fff;
+}
+
+.color-cream {
+  background: rgb(245, 239, 234);
+  color: var(--rabay-text);
+}
+
+.color-sand {
+  background: rgb(216, 194, 164);
+  color: var(--rabay-text);
+}
+
+.color-brown {
+  background: rgb(88, 45, 23);
+  color: #fff;
+}
+
+/* MASCOT */
+.rabay-mascot-section {
+  background: var(--rabay-cream);
+}
+
+.rabay-mascot-grid {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: clamp(48px, 7vw, 96px);
+  align-items: center;
+}
+
+.rabay-mascot-grid h2 {
+  white-space: nowrap;
+}
+
+.rabay-mascot-grid h2 + p {
+  margin-top: 32px;
+}
+
+.rabay-mascot-grid figure {
+  margin: 0;
+  padding: clamp(16px, 2.5vw, 34px);
+  background: var(--rabay-paper);
+  box-shadow: 0 28px 80px rgba(42, 33, 27, 0.1);
+}
+
+.rabay-mascot-grid img {
+  width: 100%;
+  display: block;
+}
+
+/* APPLICATION */
+.rabay-application-section {
+  background: var(--rabay-paper);
+}
+
+.rabay-mockup-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(18px, 2.5vw, 34px);
+}
+
+.rabay-mockup-grid figure {
+  margin: 0;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(42, 33, 27, 0.1);
+}
+
+.rabay-mockup-grid figure:nth-child(1) {
+  grid-column: span 4;
+}
+
+.rabay-mockup-grid figure:nth-child(2) {
+  grid-column: span 4;
+}
+
+.rabay-mockup-grid figure:nth-child(3) {
+  grid-column: span 4;
+}
+
+.rabay-mockup-grid figure:nth-child(4),
+.rabay-mockup-grid figure:nth-child(5),
+.rabay-mockup-grid figure:nth-child(6),
+.rabay-mockup-grid figure:nth-child(7),
+.rabay-mockup-grid figure:nth-child(8),
+.rabay-mockup-grid figure:nth-child(9) {
+  grid-column: span 4;
+}
+
+.rabay-mockup-grid img {
+  width: 100%;
+  height: clamp(260px, 28vw, 420px);
+  object-fit: cover;
+  display: block;
+}
+
+/* VIDEO */
+.rabay-video-section {
+  background: var(--rabay-dark);
+}
+
+.rabay-video-section .rabay-section-head h2 {
+  color: var(--rabay-cream);
+  max-width: none;
+  white-space: nowrap;
+}
+
+.rabay-video-section .rabay-section-head p {
+  color: rgba(245, 239, 232, 0.72);
+}
+
+.rabay-video-section .rabay-section-head p:not(.rabay-label) {
+  max-width: none;
+  margin-top: 32px;
+  white-space: nowrap;
+}
+
+.rabay-video-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin-bottom: 48px;
+  background: rgba(245, 239, 232, 0.14);
+}
+
+.rabay-video-cards div {
+  padding: clamp(28px, 4vw, 46px);
+  background: rgba(245, 239, 232, 0.06);
+}
+
+.rabay-video-cards span {
+  color: var(--rabay-sand);
+  letter-spacing: 0.2em;
+}
+
+.rabay-video-cards h3 {
+  margin: 18px 0;
+  color: var(--rabay-cream);
+  font-size: 1.8rem;
+}
+
+.rabay-video-cards p {
+  color: rgba(245, 239, 232, 0.72);
+  line-height: 1.9;
+}
+
+.rabay-storyboard-grid {
+  display: grid;
+  gap: 28px;
+  margin-bottom: 48px;
+}
+
+.rabay-storyboard-grid img {
+  width: 100%;
+  display: block;
+}
+
+.rabay-video {
+  width: 100%;
+  display: block;
+  background: #000;
+}
+
+/* ENDING */
+.rabay-ending {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background:
+    linear-gradient(rgba(31, 26, 22, 0.5), rgba(31, 26, 22, 0.62)),
+    url("../images/rabay/bg.png") center / min(92vw, 1400px) auto no-repeat,
+    var(--rabay-dark);
+}
+
+.rabay-ending .rabay-label,
+.rabay-ending h2,
+.rabay-ending-text {
+  color: var(--rabay-cream);
+}
+
+.rabay-ending h2 {
+  max-width: 1080px;
+  margin-inline: auto;
+  font-size: clamp(2rem, 4.8vw, 4.8rem);
+  white-space: nowrap;
+}
+
+.rabay-ending-text {
+  max-width: 680px;
+  margin: 28px auto 0;
+  line-height: 2;
+}
+
+.footer {
+  background: var(--rabay-dark);
+  color: rgba(245, 239, 232, 0.62);
+}
+
+/* RWD */
+@media (max-width: 992px) {
+  .rabay-hero-grid,
+  .rabay-mascot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rabay-three-columns,
+  .rabay-role-cards,
+  .rabay-color-grid,
+  .rabay-video-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .rabay-role-head p:not(.rabay-label) {
+    white-space: normal;
+  }
+
+  .rabay-mockup-grid figure,
+  .rabay-mockup-grid figure:nth-child(n) {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 640px) {
+  .rabay-hero {
+    min-height: 92vh;
+    align-items: flex-end;
+    padding-top: 120px;
+    padding-bottom: 34px;
+    background: url("../images/rabay/rabay.png") center bottom / auto 68%
+      no-repeat;
+  }
+
+  .rabay-hero h1 {
+    font-size: clamp(3.6rem, 18vw, 6rem);
+  }
+
+  .rabay-hero-subtitle {
+    font-size: clamp(3.2rem, 18vw, 5.6rem);
+  }
+
+  .rabay-section-head.center h2 {
+    white-space: normal;
+  }
+
+  .rabay-logo-section .rabay-section-head h2 {
+    white-space: normal;
+  }
+
+  .rabay-mascot-grid h2 {
+    white-space: normal;
+  }
+
+  .rabay-video-section .rabay-section-head h2 {
+    white-space: normal;
+  }
+
+  .rabay-video-section .rabay-section-head p:not(.rabay-label) {
+    white-space: normal;
+  }
+
+  .rabay-mockup-grid figure,
+  .rabay-mockup-grid figure:nth-child(n) {
+    grid-column: span 12;
+  }
+
+  .rabay-mockup-grid img {
+    height: auto;
+  }
+
+  .rabay-ending h2 {
+    font-size: clamp(2.1rem, 10vw, 3.6rem);
+    white-space: normal;
+  }
+
+  .rabay-ending {
+    background-size: auto, min(118vw, 820px) auto;
+  }
+}

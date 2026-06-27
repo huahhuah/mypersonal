@@ -1,0 +1,683 @@
+/* =======================================================
+LOVIA - PRODUCT CASE STUDY
+======================================================= */
+
+:root {
+  --lovia-bg: #f6f7fb;
+  --lovia-white: #ffffff;
+  --lovia-dark: #101828;
+  --lovia-text: #1f2937;
+  --lovia-sub: #667085;
+  --lovia-line: rgba(16, 24, 40, 0.12);
+  --lovia-blue: #2563eb;
+  --lovia-purple: #7c3aed;
+  --lovia-soft-blue: #eef4ff;
+  --lovia-soft-purple: #f4f0ff;
+}
+
+body.lovia-page {
+  background: var(--lovia-bg);
+  color: var(--lovia-text);
+}
+
+.lovia-navbar {
+  background: rgba(16, 24, 40, 0.9);
+  backdrop-filter: blur(18px);
+}
+
+/* COMMON */
+.lovia-section {
+  padding: clamp(96px, 10vw, 150px) 0;
+}
+
+.lovia-label {
+  color: var(--lovia-blue);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.lovia-section h2,
+.lovia-overview-grid h2,
+.lovia-two-column h2,
+.lovia-reflection-box h2 {
+  color: var(--lovia-dark);
+  font-size: clamp(2.2rem, 4.8vw, 4.8rem);
+  font-weight: 850;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.lovia-text,
+.lovia-section-head p,
+.lovia-overview-grid p,
+.lovia-two-column p,
+.lovia-reflection-box p {
+  color: var(--lovia-sub);
+  font-size: 1.08rem;
+  line-height: 2;
+}
+
+.lovia-section-head {
+  max-width: 880px;
+  margin-bottom: clamp(46px, 6vw, 80px);
+}
+
+.lovia-section-head p:not(.lovia-label) {
+  margin-top: 28px;
+}
+
+/* HERO */
+.lovia-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 130px 0 80px;
+  background:
+    radial-gradient(
+      circle at 86% 18%,
+      rgba(124, 58, 237, 0.16),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(37, 99, 235, 0.16),
+      transparent 30%
+    ),
+    linear-gradient(180deg, #ffffff, var(--lovia-bg));
+}
+
+.lovia-hero-grid {
+  display: grid;
+  grid-template-columns: 0.88fr 1.12fr;
+  gap: clamp(48px, 7vw, 96px);
+  align-items: center;
+}
+
+.lovia-hero h1 {
+  margin: 0 0 20px;
+  color: var(--lovia-dark);
+  font-size: clamp(4.6rem, 12vw, 11rem);
+  font-weight: 900;
+  line-height: 0.86;
+  letter-spacing: -0.06em;
+}
+
+.lovia-subtitle {
+  color: var(--lovia-blue);
+  font-size: clamp(1.2rem, 2.2vw, 2rem);
+  font-weight: 800;
+}
+
+.lovia-hero-image {
+  margin: 0;
+  padding: clamp(18px, 3vw, 40px);
+  background: var(--lovia-white);
+  border: 1px solid var(--lovia-line);
+  border-radius: 28px;
+  box-shadow: 0 30px 90px rgba(16, 24, 40, 0.12);
+}
+
+.lovia-hero-image img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+}
+
+.lovia-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.lovia-links a {
+  padding: 12px 18px;
+  color: var(--lovia-blue);
+  text-decoration: none;
+  background: var(--lovia-soft-blue);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+/* OVERVIEW */
+.lovia-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(40px, 5vw, 68px);
+}
+
+.lovia-overview-copy {
+  min-width: 0;
+}
+
+.lovia-overview-copy h2 {
+  font-size: clamp(2.6rem, 4.8vw, 5rem);
+  white-space: nowrap;
+}
+
+.lovia-overview-copy .lovia-text {
+  max-width: 900px;
+  margin-top: 32px;
+}
+
+.lovia-overview-side {
+  display: grid;
+  grid-template-columns: minmax(560px, 1.25fr) minmax(300px, 0.75fr);
+  gap: clamp(22px, 3vw, 36px);
+  align-items: stretch;
+}
+
+.lovia-overview-visual {
+  min-height: 100%;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.14), transparent 32%),
+    radial-gradient(circle at 82% 70%, rgba(124, 58, 237, 0.12), transparent 34%),
+    var(--lovia-white);
+  border: 1px solid var(--lovia-line);
+  border-radius: 24px;
+  box-shadow: 0 24px 70px rgba(16, 24, 40, 0.08);
+}
+
+.lovia-overview-visual::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 24px;
+  bottom: 24px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--lovia-blue), var(--lovia-purple));
+  opacity: 0.22;
+  transform: translateX(-50%);
+}
+
+.lovia-overview-visual span {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  color: var(--lovia-dark);
+  font-size: 0.82rem;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(37, 99, 235, 0.14);
+  border-radius: 999px;
+}
+
+.lovia-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--lovia-line);
+  border: 1px solid var(--lovia-line);
+}
+
+.lovia-info-grid div {
+  padding: 30px;
+  background: var(--lovia-white);
+}
+
+.lovia-info-grid span {
+  color: var(--lovia-blue);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.lovia-info-grid p {
+  margin: 16px 0 0;
+  color: var(--lovia-dark);
+  font-weight: 700;
+}
+
+/* DARK */
+.lovia-dark {
+  background: var(--lovia-dark);
+  color: #fff;
+}
+
+.lovia-dark h2 {
+  color: #fff;
+}
+
+.lovia-dark p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.lovia-two-column {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(44px, 6vw, 90px);
+}
+
+.lovia-problem-solution {
+  background:
+    radial-gradient(circle at 18% 20%, rgba(37, 99, 235, 0.18), transparent 30%),
+    radial-gradient(circle at 84% 72%, rgba(124, 58, 237, 0.16), transparent 34%),
+    var(--lovia-dark);
+}
+
+.lovia-problem-solution .lovia-two-column {
+  gap: clamp(24px, 3vw, 36px);
+}
+
+.lovia-problem-card {
+  min-height: 430px;
+  padding: clamp(40px, 5vw, 72px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.lovia-problem-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 42%);
+  pointer-events: none;
+}
+
+.lovia-problem-card .lovia-label,
+.lovia-problem-card h2,
+.lovia-problem-card p {
+  position: relative;
+  z-index: 1;
+}
+
+.lovia-problem-card .lovia-label {
+  margin-bottom: auto;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.lovia-problem-card h2 {
+  max-width: none;
+  color: #fff;
+  font-size: clamp(1.6rem, 2.25vw, 2.45rem);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+
+.lovia-problem-card p:not(.lovia-label) {
+  max-width: 720px;
+  margin: 30px 0 0;
+  color: rgba(255, 255, 255, 0.74);
+}
+
+/* CAROUSEL */
+.lovia-carousel {
+  overflow: hidden;
+  border-radius: 28px;
+  background: var(--lovia-white);
+  border: 1px solid var(--lovia-line);
+  box-shadow: 0 30px 90px rgba(16, 24, 40, 0.12);
+}
+
+.lovia-carousel-image {
+  width: 100%;
+  display: block;
+}
+
+/* MUTED */
+.lovia-muted {
+  background:
+    radial-gradient(
+      circle at 86% 14%,
+      rgba(37, 99, 235, 0.08),
+      transparent 30%
+    ),
+    var(--lovia-soft-blue);
+}
+
+/* FLOW */
+.lovia-flow {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.lovia-flow div {
+  min-height: 170px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  color: var(--lovia-dark);
+  background: var(--lovia-white);
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  box-shadow: 0 22px 60px rgba(16, 24, 40, 0.08);
+}
+
+.lovia-flow span {
+  width: fit-content;
+  padding: 7px 10px;
+  color: var(--lovia-blue);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.24em;
+  background: var(--lovia-soft-blue);
+  border-radius: 999px;
+}
+
+.lovia-flow h3 {
+  margin: 28px 0 10px;
+  color: var(--lovia-dark);
+  font-size: 1.25rem;
+  font-weight: 850;
+}
+
+.lovia-flow p {
+  margin: 0;
+  color: var(--lovia-sub);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.lovia-flow .is-highlight {
+  background:
+    linear-gradient(90deg, var(--lovia-blue), var(--lovia-purple)) top / 100% 4px
+      no-repeat,
+    var(--lovia-white);
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+.lovia-flow .is-highlight h3 {
+  color: var(--lovia-blue);
+}
+
+.lovia-flow .is-highlight span {
+  color: #fff;
+  background: linear-gradient(135deg, var(--lovia-blue), var(--lovia-purple));
+}
+
+/* FEATURES */
+.lovia-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--lovia-line);
+}
+
+.lovia-feature-grid div {
+  padding: clamp(28px, 4vw, 44px);
+  background: var(--lovia-white);
+}
+
+.lovia-feature-grid span {
+  color: var(--lovia-blue);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+}
+
+.lovia-feature-grid h3,
+.lovia-tech-grid h3 {
+  margin: 18px 0;
+  color: var(--lovia-dark);
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.lovia-feature-grid p,
+.lovia-tech-grid p {
+  color: var(--lovia-sub);
+  line-height: 1.9;
+}
+
+/* ARCHITECTURE */
+.lovia-architecture {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.lovia-architecture::before {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 50%;
+  height: 1px;
+  background: linear-gradient(90deg, var(--lovia-blue), var(--lovia-purple));
+  opacity: 0.32;
+}
+
+.lovia-architecture div {
+  min-height: 230px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04));
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.18);
+}
+
+.lovia-architecture-icon {
+  width: 76px;
+  height: 76px;
+  margin: 0 0 26px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.lovia-architecture-icon img {
+  width: 52px;
+  height: 52px;
+  display: block;
+}
+
+.lovia-architecture span {
+  width: fit-content;
+  margin-bottom: auto;
+  padding: 7px 10px;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.lovia-architecture h3 {
+  margin: 34px 0 12px;
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 850;
+}
+
+.lovia-architecture p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+}
+
+.lovia-dark .lovia-section-head p:not(.lovia-label) {
+  max-width: none;
+  white-space: nowrap;
+}
+
+/* PROCESS */
+.lovia-process-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(24px, 3vw, 36px);
+  background: transparent;
+}
+
+.lovia-process-list div {
+  min-height: 100%;
+  padding: clamp(18px, 2.5vw, 28px);
+  background: var(--lovia-white);
+  border: 1px solid var(--lovia-line);
+  box-shadow: 0 22px 60px rgba(16, 24, 40, 0.08);
+}
+
+.lovia-process-list figure {
+  margin: 0 0 28px;
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--lovia-soft-blue);
+  border: 1px solid rgba(37, 99, 235, 0.12);
+}
+
+.lovia-process-list img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.lovia-process-list span {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--lovia-blue);
+  font-weight: 900;
+  letter-spacing: 0.2em;
+}
+
+.lovia-process-list p {
+  margin: 0;
+  color: var(--lovia-text);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* TECH */
+.lovia-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--lovia-line);
+}
+
+.lovia-tech-grid div {
+  padding: clamp(28px, 4vw, 44px);
+  background: var(--lovia-white);
+}
+
+/* REFLECTION */
+.lovia-reflection {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(124, 58, 237, 0.1), transparent 30%),
+    #ffffff;
+}
+
+.lovia-reflection-box {
+  max-width: 920px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.lovia-reflection-box p:not(.lovia-label) {
+  max-width: 860px;
+  margin-top: 32px;
+  margin-inline: auto;
+  text-align: left;
+}
+
+.lovia-page .footer {
+  background: var(--lovia-dark);
+  color: rgba(255, 255, 255, 0.62);
+}
+
+/* RWD */
+@media (max-width: 992px) {
+  .lovia-hero-grid,
+  .lovia-overview-grid,
+  .lovia-overview-side,
+  .lovia-two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .lovia-overview-copy h2 {
+    white-space: normal;
+  }
+
+  .lovia-dark .lovia-section-head p:not(.lovia-label) {
+    white-space: normal;
+  }
+
+  .lovia-overview-visual {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .lovia-overview-visual::before {
+    left: 24px;
+    right: 24px;
+    top: 50%;
+    bottom: auto;
+    width: auto;
+    height: 2px;
+    background: linear-gradient(90deg, var(--lovia-blue), var(--lovia-purple));
+    transform: translateY(-50%);
+  }
+
+  .lovia-flow,
+  .lovia-feature-grid,
+  .lovia-architecture,
+  .lovia-process-list,
+  .lovia-tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lovia-architecture::before {
+    display: none;
+  }
+
+}
+
+@media (max-width: 640px) {
+  .lovia-hero h1 {
+    font-size: clamp(4rem, 20vw, 6rem);
+  }
+
+  .lovia-problem-card {
+    min-height: 340px;
+  }
+
+  .lovia-problem-card h2 {
+    white-space: normal;
+  }
+
+  .lovia-info-grid,
+  .lovia-overview-visual,
+  .lovia-flow,
+  .lovia-feature-grid,
+  .lovia-architecture,
+  .lovia-process-list,
+  .lovia-tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lovia-process-list div {
+    grid-template-columns: 1fr;
+  }
+}

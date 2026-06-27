@@ -1,0 +1,844 @@
+/* =======================================================
+THE LAST SIGNAL - CINEMATIC PROJECT PAGE
+======================================================= */
+
+:root {
+  --signal-bg: #060b14;
+  --signal-bg-2: #0c1322;
+  --signal-bg-3: #111827;
+  --signal-card: rgba(255, 255, 255, 0.045);
+  --signal-line: rgba(255, 255, 255, 0.1);
+  --signal-text: #f3f4f6;
+  --signal-sub: #b8c2cf;
+  --signal-muted: rgba(184, 194, 207, 0.68);
+  --signal-blue: #59c7ff;
+  --signal-blue-soft: rgba(89, 199, 255, 0.16);
+  --signal-orange: #ff9f5a;
+  --signal-orange-soft: rgba(255, 159, 90, 0.16);
+}
+
+/* 全頁底色 */
+body {
+  background: var(--signal-bg);
+  color: var(--signal-text);
+}
+
+/* NAVBAR */
+.custom-navbar {
+  background: rgba(6, 11, 20, 0.82);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* =======================================================
+HERO
+======================================================= */
+
+.signal-hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: var(--signal-text);
+  background-image: url("../images/singnal/17.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.signal-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(6, 11, 20, 0.96) 0%,
+      rgba(6, 11, 20, 0.74) 42%,
+      rgba(6, 11, 20, 0.32) 100%
+    ),
+    radial-gradient(
+      circle at 72% 38%,
+      rgba(89, 199, 255, 0.22),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 28% 72%,
+      rgba(255, 159, 90, 0.12),
+      transparent 30%
+    );
+  z-index: 1;
+}
+
+.signal-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 0 1px,
+      transparent 1px 90px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.025) 0 1px,
+      transparent 1px 90px
+    );
+  mix-blend-mode: screen;
+  opacity: 0.55;
+  z-index: 2;
+}
+
+.signal-hero-overlay {
+  display: none;
+}
+
+.signal-hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 980px;
+  padding-top: 90px;
+}
+
+.signal-hero h1 {
+  margin: 18px 0 20px;
+  font-size: clamp(3.2rem, 9vw, 8.5rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: 0.04em;
+  color: var(--signal-text);
+  text-shadow: 0 0 42px rgba(89, 199, 255, 0.22);
+}
+
+.signal-en-title {
+  color: var(--signal-blue);
+  font-size: clamp(1rem, 2vw, 1.45rem);
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  margin-bottom: 34px;
+}
+
+.signal-hero-text {
+  max-width: 720px;
+  color: rgba(243, 244, 246, 0.88);
+  font-size: clamp(1.05rem, 2vw, 1.45rem);
+  line-height: 2;
+}
+
+/* =======================================================
+COMMON
+======================================================= */
+
+.project-section {
+  position: relative;
+  padding: clamp(100px, 11vw, 170px) 0;
+}
+
+.project-label {
+  color: var(--signal-blue);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  color: var(--signal-text);
+  font-size: clamp(2.2rem, 5vw, 4.8rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.section-description,
+.project-text {
+  color: var(--signal-sub);
+  font-size: clamp(1rem, 1.3vw, 1.12rem);
+  line-height: 2;
+}
+
+.section-header {
+  max-width: 920px;
+  margin-bottom: clamp(46px, 6vw, 86px);
+}
+
+/* =======================================================
+SECTION BACKGROUNDS
+======================================================= */
+
+.signal-light-section,
+.signal-dark-section {
+  background: var(--signal-bg);
+  color: var(--signal-text);
+}
+
+.signal-light-section {
+  background:
+    radial-gradient(
+      circle at 86% 12%,
+      rgba(89, 199, 255, 0.12),
+      transparent 28%
+    ),
+    linear-gradient(180deg, var(--signal-bg), var(--signal-bg-2));
+}
+
+.signal-dark-section {
+  background:
+    radial-gradient(
+      circle at 16% 18%,
+      rgba(255, 159, 90, 0.1),
+      transparent 28%
+    ),
+    linear-gradient(180deg, var(--signal-bg-2), var(--signal-bg));
+}
+
+.signal-dark-section .project-text,
+.signal-dark-section .section-description,
+.signal-light-section .project-text,
+.signal-light-section .section-description {
+  color: var(--signal-sub);
+}
+
+/* =======================================================
+OVERVIEW
+======================================================= */
+
+.signal-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.signal-info-grid div {
+  min-height: 180px;
+  padding: 30px;
+  background: var(--signal-card);
+  border: 1px solid var(--signal-line);
+  backdrop-filter: blur(22px);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+}
+
+.signal-info-grid span {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--signal-blue);
+  font-size: 0.78rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.signal-info-grid p {
+  margin: 0;
+  color: var(--signal-text);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* =======================================================
+CONCEPT
+======================================================= */
+
+.signal-concept-row {
+  margin-top: 20px;
+}
+
+.signal-card {
+  height: 100%;
+  padding: clamp(30px, 4vw, 46px);
+  background: linear-gradient(
+    135deg,
+    rgba(89, 199, 255, 0.08),
+    rgba(255, 255, 255, 0.035)
+  );
+  border: 1px solid var(--signal-line);
+  backdrop-filter: blur(20px);
+}
+
+.signal-card h3 {
+  margin-bottom: 20px;
+  color: var(--signal-text);
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  font-weight: 700;
+}
+
+.signal-card p {
+  margin: 0;
+  color: var(--signal-sub);
+  line-height: 2;
+}
+
+/* =======================================================
+VISUAL DIRECTION / COLOR SYSTEM
+======================================================= */
+
+.signal-color-system {
+  display: grid;
+  gap: 22px;
+  margin-top: 44px;
+}
+
+.signal-color {
+  min-height: 180px;
+  padding: clamp(28px, 4vw, 46px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--signal-line);
+}
+
+.signal-color::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.045) 0 1px,
+    transparent 1px 48px
+  );
+  opacity: 0.5;
+}
+
+.signal-color span,
+.signal-color p {
+  position: relative;
+  z-index: 1;
+}
+
+.signal-color span {
+  color: #fff;
+  font-size: clamp(1.8rem, 4vw, 3.8rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.signal-color p {
+  margin: 12px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.05rem;
+}
+
+.color-blue {
+  background:
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(255, 255, 255, 0.18),
+      transparent 28%
+    ),
+    linear-gradient(90deg, #0a1f38, #166b9d);
+}
+
+.color-orange {
+  background:
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(255, 255, 255, 0.16),
+      transparent 28%
+    ),
+    linear-gradient(90deg, #33170d, #c56d35);
+}
+
+.color-black {
+  background:
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(89, 199, 255, 0.15),
+      transparent 30%
+    ),
+    linear-gradient(90deg, #02040a, #111827);
+}
+
+.color-gray {
+  background:
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(255, 255, 255, 0.13),
+      transparent 28%
+    ),
+    linear-gradient(90deg, #18202b, #5f6975);
+}
+
+/* =======================================================
+CHARACTER
+======================================================= */
+
+.signal-full-image {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--signal-line);
+  box-shadow:
+    0 36px 100px rgba(0, 0, 0, 0.42),
+    0 0 60px rgba(89, 199, 255, 0.12);
+}
+
+/* =======================================================
+STORYBOARD
+======================================================= */
+
+.signal-timeline {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  margin: 46px 0;
+  background: var(--signal-line);
+  border: 1px solid var(--signal-line);
+}
+
+.signal-timeline div {
+  min-height: 160px;
+  padding: 26px;
+  background: rgba(255, 255, 255, 0.035);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.signal-timeline span {
+  color: var(--signal-blue);
+  font-size: 0.78rem;
+  letter-spacing: 0.26em;
+}
+
+.signal-timeline p {
+  margin: 0;
+  color: var(--signal-text);
+  font-size: 1.08rem;
+}
+
+.signal-story-image,
+.story-image {
+  width: 100%;
+  display: block;
+  border-radius: 0;
+  border: 1px solid var(--signal-line);
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.34);
+}
+
+.signal-storyboard-image-wrap {
+  width: min(100%, 1380px);
+  margin: 52px auto 0;
+  display: flex;
+  justify-content: flex-start;
+  overflow: visible;
+}
+
+.signal-story-image {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  border: 0;
+  box-shadow: none;
+  transform: translateX(-7%);
+}
+
+/* =======================================================
+AI WORKFLOW
+======================================================= */
+
+.signal-narrative {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(28px, 4vw, 46px);
+  margin-top: 72px;
+}
+
+.signal-narrative-feature {
+  display: grid;
+  grid-template-columns: minmax(520px, 0.95fr) minmax(420px, 1.05fr);
+  gap: 1px;
+  background: var(--signal-line);
+  border: 1px solid var(--signal-line);
+}
+
+.signal-narrative-copy {
+  padding: clamp(32px, 5vw, 64px);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(24px, 4vw, 44px);
+  background:
+    radial-gradient(
+      circle at 88% 16%,
+      rgba(89, 199, 255, 0.12),
+      transparent 30%
+    ),
+    rgba(255, 255, 255, 0.045);
+}
+
+.signal-narrative-image {
+  min-height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #02040a;
+}
+
+.signal-narrative-image img {
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  min-height: 560px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transform: translate(-2px, -2px);
+}
+
+.signal-narrative-copy h3 {
+  max-width: none;
+  margin: 18px 0 0;
+  color: var(--signal-text);
+  font-size: clamp(1.7rem, 2.65vw, 2.65rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+
+.signal-narrative-copy p.project-label {
+  margin: 0;
+}
+
+.signal-narrative-copy p {
+  margin: 0;
+  color: rgba(221, 236, 248, 0.82);
+  line-height: 2;
+}
+
+.signal-narrative-text {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.signal-narrative-text p {
+  max-width: 720px;
+}
+
+.signal-narrative-copy blockquote {
+  max-width: none;
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  justify-self: start;
+  color: var(--signal-text);
+  font-size: clamp(1.2rem, 2vw, 1.65rem);
+  font-weight: 700;
+  line-height: 1.7;
+  white-space: nowrap;
+  border-left: 0;
+}
+
+.signal-narrative-copy blockquote::before {
+  content: "";
+  width: 3px;
+  height: 42px;
+  flex: 0 0 auto;
+  background: var(--signal-blue);
+}
+
+.signal-plot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--signal-line);
+  border: 1px solid var(--signal-line);
+}
+
+.signal-plot-grid article {
+  min-height: 220px;
+  padding: clamp(24px, 3vw, 34px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.signal-plot-grid span {
+  margin-bottom: auto;
+  color: var(--signal-blue);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+}
+
+.signal-plot-grid h4 {
+  margin: 34px 0 14px;
+  color: var(--signal-text);
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  font-weight: 800;
+}
+
+.signal-plot-grid p {
+  margin: 0;
+  color: var(--signal-sub);
+  line-height: 1.9;
+}
+
+.signal-workflow {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 860px;
+  margin: 64px auto 0;
+  border-top: 1px solid var(--signal-line);
+}
+
+.signal-workflow div {
+  position: relative;
+  padding: 28px 28px 28px 72px;
+  color: var(--signal-text);
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  border-bottom: 1px solid var(--signal-line);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.signal-workflow div::before {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  background: var(--signal-blue);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 0 22px rgba(89, 199, 255, 0.75);
+}
+
+.signal-workflow div:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 34px;
+  top: calc(50% + 14px);
+  width: 1px;
+  height: calc(100% - 8px);
+  background: linear-gradient(var(--signal-blue), transparent);
+}
+
+/* =======================================================
+PROMOTIONAL VISUAL SYSTEM
+======================================================= */
+
+.signal-promo-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.82fr) minmax(420px, 1.18fr);
+  gap: clamp(22px, 3vw, 34px);
+  align-items: stretch;
+}
+
+.signal-promo-large,
+.signal-promo-side img {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--signal-line);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.34);
+}
+
+.signal-promo-large {
+  margin: 0;
+}
+
+.signal-promo-large img,
+.signal-promo-side img {
+  width: 100%;
+  display: block;
+}
+
+.signal-promo-large img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.signal-promo-side {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(22px, 3vw, 34px);
+}
+
+.signal-promo-side img:nth-child(1),
+.signal-promo-side img:nth-child(2) {
+  height: 100%;
+  object-fit: cover;
+}
+
+.signal-promo-side img:nth-child(3) {
+  grid-column: 1 / -1;
+}
+
+/* =======================================================
+VIDEO
+======================================================= */
+
+.signal-video,
+.project-video {
+  width: 100%;
+  display: block;
+  border-radius: 0;
+  border: 1px solid var(--signal-line);
+  background: #000;
+  box-shadow:
+    0 36px 100px rgba(0, 0, 0, 0.55),
+    0 0 70px rgba(89, 199, 255, 0.1);
+}
+
+/* =======================================================
+REFLECTION
+======================================================= */
+
+.signal-light-section:last-of-type {
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(89, 199, 255, 0.16),
+      transparent 30%
+    ),
+    linear-gradient(180deg, var(--signal-bg), #02040a);
+}
+
+.signal-reflection-section {
+  padding: clamp(76px, 8vw, 120px) 0 clamp(92px, 9vw, 140px);
+}
+
+.signal-reflection-section .project-label {
+  margin-bottom: 18px;
+  font-size: 0.76rem;
+  letter-spacing: 0.42em;
+}
+
+.signal-reflection-section .section-title {
+  margin-bottom: clamp(28px, 4vw, 42px);
+  font-size: clamp(2.7rem, 6vw, 5.2rem);
+  line-height: 1.08;
+  letter-spacing: 0.02em;
+}
+
+.signal-reflection-section .project-text {
+  max-width: 900px;
+  margin: 0 auto 28px;
+  color: rgba(221, 236, 248, 0.92);
+  font-size: clamp(1.05rem, 1.6vw, 1.28rem);
+  line-height: 2.15;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+
+.signal-reflection-section .project-text:last-child {
+  margin-bottom: 0;
+}
+
+/* =======================================================
+FOOTER
+======================================================= */
+
+.footer {
+  background: #02040a;
+  color: var(--signal-muted);
+  border-top: 1px solid var(--signal-line);
+}
+
+/* =======================================================
+RWD
+======================================================= */
+
+@media (max-width: 991px) {
+  .signal-hero {
+    min-height: 82vh;
+    background-position: center;
+  }
+
+  .signal-info-grid,
+  .signal-promo-layout,
+  .signal-narrative {
+    grid-template-columns: 1fr;
+  }
+
+  .signal-narrative-copy {
+    grid-template-columns: 1fr;
+  }
+
+  .signal-narrative-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .signal-narrative-copy h3 {
+    white-space: normal;
+  }
+
+  .signal-narrative-copy blockquote {
+    white-space: normal;
+  }
+
+  .signal-narrative-image img {
+    min-height: 420px;
+  }
+
+  .signal-narrative-text {
+    grid-template-columns: 1fr;
+  }
+
+  .signal-plot-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .signal-timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .signal-color-system {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .signal-hero {
+    min-height: 78vh;
+  }
+
+  .signal-hero-content {
+    padding-top: 72px;
+  }
+
+  .signal-en-title {
+    letter-spacing: 0.22em;
+  }
+
+  .signal-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .signal-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .signal-plot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .signal-timeline div {
+    min-height: 120px;
+  }
+
+  .signal-storyboard-image-wrap {
+    margin-top: 34px;
+  }
+
+  .signal-story-image {
+    width: 100%;
+    transform: translateX(-4%);
+  }
+
+  .signal-workflow div {
+    padding-left: 58px;
+  }
+
+  .signal-workflow div::before {
+    left: 24px;
+  }
+
+  .signal-workflow div:not(:last-child)::after {
+    left: 30px;
+  }
+}
