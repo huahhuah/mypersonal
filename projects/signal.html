@@ -16,38 +16,7 @@
   </head>
 
   <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
-      <div class="container">
-        <a href="../index.html" class="navbar-brand logo">YU LING PENG</a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html#works">WORKS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html#about">ABOUT</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html#skills">SKILLS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html#contact">CONTACT</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div id="site-nav"></div>
 
     <!-- HERO -->
     <section class="signal-hero">
@@ -336,7 +305,7 @@
           </div>
         </div>
 
-        <div class="signal-storyboard-image-wrap">
+        <div class="signal-storyboard-image-wrap" data-lightbox>
           <img
             src="../images/singnal/最後一封訊號分鏡圖.png"
             class="story-image signal-story-image"
@@ -358,28 +327,62 @@
           </p>
         </div>
 
-        <div class="signal-promo-layout">
-          <figure class="signal-promo-large">
-            <img
-              src="../images/singnal/signal.png"
-              alt="THE LAST SIGNAL 電影主視覺海報"
-            />
-          </figure>
+        <div class="signal-promo-grid">
+          <article class="signal-promo-card signal-promo-card-large">
+            <figure data-lightbox>
+              <img
+                src="../images/singnal/signal.png"
+                alt="THE LAST SIGNAL 電影主視覺海報"
+              />
+            </figure>
+            <span>Poster Design</span>
+            <h3>電影主視覺海報</h3>
+            <p>
+              以 AI 少女、城市光束與藍色能源場景建立短片的核心視覺，呈現等待、甦醒與末日城市的情緒。
+            </p>
+          </article>
 
-          <div class="signal-promo-side">
-            <img
-              src="../images/singnal/最後一封訊號-電影票.png"
-              alt="THE LAST SIGNAL 電影票設計"
-            />
-            <img
-              src="../images/singnal/drink.png"
-              alt="THE LAST SIGNAL 能量飲料包裝"
-            />
-            <img
-              src="../images/singnal/最後一封訊號-飲料罐.png"
-              alt="THE LAST SIGNAL 能量飲料設計稿"
-            />
-          </div>
+          <article class="signal-promo-card">
+            <figure data-lightbox>
+              <img
+                src="../images/singnal/最後一封訊號-電影票.png"
+                alt="THE LAST SIGNAL 電影票設計"
+              />
+            </figure>
+            <span>Ticket Design</span>
+            <h3>電影票券設計</h3>
+            <p>
+              將「最後訊號」轉化為通行證形式，延伸座位、時間、條碼與科幻介面資訊，強化觀影儀式感。
+            </p>
+          </article>
+
+          <article class="signal-promo-card">
+            <figure data-lightbox>
+              <img
+                src="../images/singnal/drink.png"
+                alt="THE LAST SIGNAL 能量飲料包裝"
+              />
+            </figure>
+            <span>Packaging Mockup</span>
+            <h3>能量飲料包裝</h3>
+            <p>
+              以 CITY ONLINE 作為包裝主軸，將能源核心、城市剪影與訊號圖像延伸為電影周邊飲品視覺。
+            </p>
+          </article>
+
+          <article class="signal-promo-card signal-promo-card-wide">
+            <figure data-lightbox>
+              <img
+                src="../images/singnal/最後一封訊號-飲料罐.png"
+                alt="THE LAST SIGNAL 能量飲料設計稿"
+              />
+            </figure>
+            <span>Label Design</span>
+            <h3>飲料罐展開設計</h3>
+            <p>
+              透過球體訊號、警示資訊、功能圖示與包裝欄位，建立具有世界觀設定的完整罐身版面。
+            </p>
+          </article>
         </div>
       </div>
     </section>
@@ -432,8 +435,10 @@
       </div>
     </section>
 
-    <footer class="footer">© 2026 YU LING PENG</footer>
+    <div id="site-footer"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/include.js"></script>
+    <script src="/js/lightbox.js"></script>
   </body>
 </html>

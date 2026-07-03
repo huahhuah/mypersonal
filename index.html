@@ -30,43 +30,7 @@
     <!-- =======================================================
 NAVBAR
 ======================================================= -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
-      <div class="container">
-        <a class="navbar-brand logo" href="#"> YU LING PENG </a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#works"> WORKS </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#about"> ABOUT </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#skills"> SKILLS </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#contact"> CONTACT </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div id="site-nav"></div>
 
     <!-- =======================================================
 HERO
@@ -172,26 +136,30 @@ WORKS
             </a>
           </div>
 
-          <!-- SOUNDSPACE -->
+          <!-- PAUSE & PAUSA -->
           <div class="col-lg-4 col-md-6">
-            <a href="./projects/soundspace.html" class="project-card">
+            <a href="./projects/pause-pausa.html" class="project-card">
               <img
-                src="./images/soundspace/cover.jpg"
+                src="./images/pause/pp封面.png"
                 class="project-image"
-                alt="SoundSpace 音樂生活選物"
+                alt="Pause & Pausa 品牌設計"
               />
 
               <div class="project-content">
-                <p class="project-category">WEB DESIGN / BRAND EXPERIENCE</p>
-                <h3 class="project-title-small">SOUNDSPACE</h3>
+                <p class="project-category">
+                  BRAND DESIGN / E-COMMERCE EXPERIENCE
+                </p>
+
+                <h3 class="project-title-small">PAUSE & PAUSA</h3>
+
                 <p class="project-description">
-                  以音樂生活品牌為主題，規劃品牌識別、電商首頁、活動
-                  Banner、商品頁與社群視覺，建立完整數位品牌體驗。
+                  以慢生活為核心理念，打造完整品牌識別與生活選物系列，涵蓋
+                  Logo、包裝設計、
+                  商品開發、電商網站、品牌視覺與數位體驗，建立一致且具有質感的品牌形象。
                 </p>
               </div>
             </a>
           </div>
-
           <!-- CREATIVE COLLECTION -->
           <div class="col-lg-4 col-md-6">
             <a href="./projects/collection.html" class="project-card">
@@ -349,30 +317,10 @@ CONTACT
     <!-- =======================================================
 FOOTER
 ======================================================= -->
-    <footer class="footer">
-      <p class="footer-quote">
-        Designing stories through visuals, AI and digital experiences.
-      </p>
-
-      <p>© 2026 YU LING PENG</p>
-    </footer>
+    <div id="site-footer"></div>
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-      const navbarCollapse = document.querySelector("#navbarNav");
-      const navLinks = document.querySelectorAll("#navbarNav .nav-link");
-
-      navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          if (!navbarCollapse.classList.contains("show")) {
-            return;
-          }
-
-          bootstrap.Collapse.getOrCreateInstance(navbarCollapse).hide();
-        });
-      });
-    </script>
+    <script src="/js/include.js"></script>
   </body>
 </html>

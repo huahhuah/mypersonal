@@ -1126,6 +1126,9 @@ body.rabay-brand-page {
   }
 
   .rabay-role-head p:not(.rabay-label) {
+    max-width: 360px;
+    margin-inline: auto;
+    text-align: left;
     white-space: normal;
   }
 
@@ -1138,11 +1141,26 @@ body.rabay-brand-page {
 @media (max-width: 640px) {
   .rabay-hero {
     min-height: 92vh;
-    align-items: flex-end;
-    padding-top: 120px;
-    padding-bottom: 34px;
-    background: url("../images/rabay/rabay.png") center bottom / auto 68%
+    align-items: flex-start;
+    padding-top: 118px;
+    padding-bottom: 0;
+    background: url("../images/rabay/rabay.png") center bottom / auto 70%
       no-repeat;
+  }
+
+  .rabay-hero-grid {
+    max-width: min(82vw, 360px);
+  }
+
+  .rabay-hero-copy {
+    text-align: left;
+  }
+
+  .rabay-hero .rabay-label {
+    margin-bottom: 16px;
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    line-height: 1.5;
   }
 
   .rabay-hero h1 {
@@ -1150,11 +1168,37 @@ body.rabay-brand-page {
   }
 
   .rabay-hero-subtitle {
-    font-size: clamp(3.2rem, 18vw, 5.6rem);
+    margin: 0 0 18px;
+    font-size: clamp(2.9rem, 15vw, 4.35rem);
+    line-height: 0.95;
+    letter-spacing: 0.04em;
+  }
+
+  .rabay-hero-text {
+    max-width: 310px;
+    font-size: 1rem;
+    line-height: 1.85;
   }
 
   .rabay-section-head.center h2 {
     white-space: normal;
+  }
+
+  .rabay-intro .rabay-section-head.center,
+  .rabay-application-section .rabay-section-head.center {
+    text-align: left;
+  }
+
+  .rabay-intro .rabay-section-head.center h2,
+  .rabay-application-section .rabay-section-head.center h2 {
+    letter-spacing: 0.02em;
+    line-height: 1.18;
+  }
+
+  .rabay-intro .rabay-section-head.center p:not(.rabay-label),
+  .rabay-application-section .rabay-section-head.center p:not(.rabay-label) {
+    margin-inline: 0;
+    text-align: left;
   }
 
   .rabay-logo-section .rabay-section-head h2 {

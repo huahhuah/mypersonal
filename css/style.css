@@ -93,6 +93,16 @@ NAVBAR
   width: 100%;
 }
 
+.site-navbar {
+  width: 100%;
+
+  background: #040816;
+
+  backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid var(--border);
+}
+
 .logo {
   letter-spacing: 5px;
 
@@ -635,6 +645,50 @@ FOOTER
   color: rgba(255, 255, 255, 0.65);
 
   margin-bottom: 10px !important;
+}
+
+/* =======================================================
+SHARED LIGHTBOX
+======================================================= */
+
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(18px, 4vw, 56px);
+  background: rgba(8, 8, 8, 0.88);
+}
+
+.image-lightbox.is-open {
+  display: flex;
+}
+
+.image-lightbox img {
+  max-width: min(100%, 1280px);
+  max-height: 88vh;
+  object-fit: contain;
+}
+
+.image-lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 250, 242, 0.28);
+  border-radius: 999px;
+  color: #fffaf2;
+  background: rgba(31, 31, 31, 0.46);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+body.lightbox-open {
+  overflow: hidden;
 }
 
 /* =======================================================

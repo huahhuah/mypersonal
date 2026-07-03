@@ -417,11 +417,37 @@ STORYBOARD
 }
 
 .signal-storyboard-image-wrap {
+  position: relative;
   width: min(100%, 1380px);
   margin: 52px auto 0;
   display: flex;
   justify-content: flex-start;
   overflow: visible;
+  cursor: zoom-in;
+}
+
+.signal-storyboard-image-wrap::after {
+  content: "VIEW";
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  padding: 8px 12px;
+  color: var(--signal-text);
+  background: rgba(6, 11, 20, 0.72);
+  border: 1px solid var(--signal-line);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 0.24s ease,
+    transform 0.24s ease;
+}
+
+.signal-storyboard-image-wrap:hover::after {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .signal-story-image {
@@ -623,49 +649,117 @@ AI WORKFLOW
 PROMOTIONAL VISUAL SYSTEM
 ======================================================= */
 
-.signal-promo-layout {
+.signal-promo-grid {
   display: grid;
-  grid-template-columns: minmax(280px, 0.82fr) minmax(420px, 1.18fr);
+  grid-template-columns: minmax(280px, 0.9fr) repeat(2, minmax(220px, 1fr));
   gap: clamp(22px, 3vw, 34px);
-  align-items: stretch;
+  align-items: start;
+  margin-top: 56px;
 }
 
-.signal-promo-large,
-.signal-promo-side img {
+.signal-promo-card {
+  height: 100%;
   background: rgba(255, 255, 255, 0.035);
   border: 1px solid var(--signal-line);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.34);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
 }
 
-.signal-promo-large {
+.signal-promo-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(89, 199, 255, 0.42);
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.signal-promo-card-large {
+  grid-row: span 2;
+}
+
+.signal-promo-card-wide {
+  grid-column: span 2;
+}
+
+.signal-promo-card figure {
+  position: relative;
   margin: 0;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #030812;
+  cursor: zoom-in;
 }
 
-.signal-promo-large img,
-.signal-promo-side img {
+.signal-promo-card-large figure {
+  aspect-ratio: 3 / 4.75;
+}
+
+.signal-promo-card figure::after {
+  content: "VIEW";
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  padding: 7px 12px;
+  color: var(--signal-text);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  background: rgba(3, 8, 18, 0.72);
+  border: 1px solid rgba(89, 199, 255, 0.35);
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.signal-promo-card figure:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.signal-promo-card img {
   width: 100%;
+  height: 100%;
   display: block;
+  object-fit: contain;
+  transition: transform 0.35s ease;
 }
 
-.signal-promo-large img {
-  height: 100%;
-  object-fit: cover;
+.signal-promo-card figure:hover img {
+  transform: scale(1.025);
 }
 
-.signal-promo-side {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: clamp(22px, 3vw, 34px);
+.signal-promo-card span,
+.signal-promo-card h3,
+.signal-promo-card p {
+  margin-right: clamp(18px, 2vw, 26px);
+  margin-left: clamp(18px, 2vw, 26px);
 }
 
-.signal-promo-side img:nth-child(1),
-.signal-promo-side img:nth-child(2) {
-  height: 100%;
-  object-fit: cover;
+.signal-promo-card span {
+  display: block;
+  margin-top: 24px;
+  color: var(--signal-blue);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
 }
 
-.signal-promo-side img:nth-child(3) {
-  grid-column: 1 / -1;
+.signal-promo-card h3 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  color: var(--signal-text);
+  font-size: clamp(1.15rem, 1.7vw, 1.45rem);
+  font-weight: 800;
+}
+
+.signal-promo-card p {
+  margin-bottom: 26px;
+  color: var(--signal-sub);
+  line-height: 1.85;
+  letter-spacing: 0.02em;
 }
 
 /* =======================================================
@@ -750,9 +844,17 @@ RWD
   }
 
   .signal-info-grid,
-  .signal-promo-layout,
   .signal-narrative {
     grid-template-columns: 1fr;
+  }
+
+  .signal-promo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .signal-promo-card-large,
+  .signal-promo-card-wide {
+    grid-column: span 2;
   }
 
   .signal-narrative-copy {
@@ -840,5 +942,19 @@ RWD
 
   .signal-workflow div:not(:last-child)::after {
     left: 30px;
+  }
+
+  .signal-promo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .signal-promo-card-large,
+  .signal-promo-card-wide {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .signal-promo-card-large figure {
+    aspect-ratio: 4 / 5;
   }
 }
