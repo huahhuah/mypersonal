@@ -523,8 +523,20 @@ IMAGE
   transition: transform 0.7s ease;
 }
 
+.project-image-contain {
+  padding: 16px;
+
+  background: #ffffff;
+
+  object-fit: contain;
+}
+
 .project-card:hover .project-image {
   transform: scale(1.06);
+}
+
+.project-card:hover .project-image-contain {
+  transform: scale(1.02);
 }
 
 /* =======================================================
