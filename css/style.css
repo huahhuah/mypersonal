@@ -679,9 +679,24 @@ SHARED LIGHTBOX
 }
 
 .image-lightbox img {
-  max-width: min(100%, 1280px);
+  max-width: min(90vw, 1280px);
   max-height: 88vh;
   object-fit: contain;
+}
+
+.image-lightbox-figure {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  justify-items: center;
+}
+
+.image-lightbox-title {
+  max-width: min(90vw, 960px);
+  color: rgba(255, 250, 242, 0.86);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: center;
 }
 
 .image-lightbox-close {
@@ -701,6 +716,17 @@ SHARED LIGHTBOX
 
 body.lightbox-open {
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .image-lightbox {
+    padding: 16px;
+  }
+
+  .image-lightbox img {
+    max-width: 94vw;
+    max-height: 85vh;
+  }
 }
 
 /* =======================================================
